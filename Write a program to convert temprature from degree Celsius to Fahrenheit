@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+Void main ( )
+{
+Float Celsius, Fahrenheit; 
+Clrscr( );
+Printf("enter the temperature in Celsius ");
+Scanf("%:f",& Celsius); 
+Fahrenheit =(Celsius *9/5)+32;
+Printf("%2f Celsius %2f fahrenhit",Celsius, Fahrenheit); 
+Getch( );
+}
