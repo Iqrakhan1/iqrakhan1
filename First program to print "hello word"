@@ -1,0 +1,8 @@
+#include<stdio.h>
+#include<conio.h>
+Int main ( )
+{
+Clrscr( );
+Printf("hello word ");
+Getch( );
+}
