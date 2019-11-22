@@ -1,1 +1,13 @@
-#includw
+
+#include<stdio.h>
+#include<conio.h>
+Void main ( )
+{      
+Clrscr( );
+Int a, b, c; 
+Printf("enter the value of a and b");
+Scanf("%d%d,&a&b);
+C=a+b;
+Printf("the sum is%d,c);
+Getch( );
+}
