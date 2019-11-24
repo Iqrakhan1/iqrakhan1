@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+Void main ( )
+{
+Float sum; 
+Float per;
+Int hindi, English, math, Urdu, science; 
+Clrscr( );
+Printf ("enter the marks of five subject ");
+Scanf("%d%d%d%d%d",& hindi, english, maths, Urdu, science) ;
+Sum =(hindi+english+maths+urdu+science);
+Printf("sum of five subject is %f\n"sum);
+Per=(sum*100/500);
+printf("parcentage is %f\n"per);
+Getch();
+}
