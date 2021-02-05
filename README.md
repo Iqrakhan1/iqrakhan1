@@ -1,4 +1,4 @@
-### Hi there 👋
+👋 Hello, i am iqra khan student of computer science engineering at Barkatullah university institution of technology bhopal, i am currently doing a intenship in RenaissanceEDU, & campus ambassador at Colco, internmind progat etc.. 
 
 <!--
 **Iqrakhan1/iqrakhan1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
