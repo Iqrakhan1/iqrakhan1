@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Function to find the total cost
+// of removing all array elements
+int findCost(int* a, int n)
+{
+    // Sort the array in descending order
+    sort(a, a + n, greater<int>());
+ 
+    // Stores the total cost
+    int count = 0;
+ 
+    for (int j = 0; j < n; j++) {
+ 
+        // Contribution of i-th
+        // greatest element to the cost
+        int p = a[j] - j;
+ 
+        // Remove the element
+        a[j] = 0;
+ 
+        // If negative
+        if (p < 0) {
+            p = 0;
+            continue;
+        }
+ 
+        // Add to the final cost
+        count += p;
+    }
+ 
+    // Return the cost
+    return count;
+}
+ 
+// Driver Code
+int main()
+{
+    // Given array arr[]
+    int arr[] = { 1, 6, 7, 4, 2, 5, 3 };
+ 
+    int N = sizeof(arr) / sizeof(arr[0]);
+ 
+    // Function Call
+    cout << findCost(arr, N);
+ 
+    return 0;
+}
