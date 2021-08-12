@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Function to print the last remaining
+// array element after after performing
+// given operations
+void canArrayBeReduced(int arr[], int N)
+{
+    // If size of the array is 1
+    if (N == 1) {
+        cout << arr[0];
+        return;
+    }
+ 
+    // Check for the condition
+    if (arr[0] < arr[N - 1]) {
+        cout << arr[N - 1];
+    }
+ 
+    // If condition is not satisfied
+    else
+        cout << "Not Possible";
+}
+ 
+// Driver Code
+int main()
+{
+    int arr[] = { 6, 5, 2, 4, 1, 3, 7 };
+    int N = sizeof(arr) / sizeof(arr[0]);
+ 
+    // Function Call
+    canArrayBeReduced(arr, N);
+ 
+    return 0;
+}
