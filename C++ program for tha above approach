@@ -1,0 +1,38 @@
+ 
+#include <bits/stdc++.h>
+using namespace std;
+ 
+
+int minimumRectangleArea(int A[], int N)
+{
+    // A variable to store the answer
+    int ans;
+ 
+    sort(A, A + 2 * N);
+ 
+    // For the case where the maximum
+    // and minimum are in different partitions
+    ans = (A[N - 1] - A[0]) * (A[2 * N - 1] - A[N]);
+ 
+    // For the case where the maximum and
+    // minimum are in the same partition
+    for (int i = 1; i < N; i++)
+        ans = min(ans, (A[2 * N - 1] - A[0])
+                           * (A[i + N - 1] - A[i]));
+ 
+    // Return the answer
+    return ans;
+}
+ 
+// Driver code
+int main()
+{
+    // Given Input
+    int A[] = { 2, 4, 1, 5, 3, 6, 7, 8 };
+    int N = sizeof(A) / sizeof(A[0]);
+    N /= 2;
+ 
+    // Function call
+    cout << minimumRectangleArea(A, N) << endl;
+    return 0;
+}
