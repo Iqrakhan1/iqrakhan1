@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Function to find the position of
+// the pair that covers every pair
+// in the array arr[][]
+void position(int arr[][2], int N)
+{
+    // Stores the index of the
+    // resultant pair
+    int pos = -1;
+ 
+    // To count the occurences
+    int count;
+ 
+    // Iterate to check every pair
+    for (int i = 0; i < N; i++) {
+ 
+        // Set count to 0
+        count = 0;
+ 
+        for (int j = 0; j < N; j++) {
+ 
+            // Condition to checked for
+            // overlapping of pairs
+            if (arr[i][0] <= arr[j][0]
+                && arr[i][1] >= arr[j][1]) {
+                count++;
+            }
+        }
+ 
+        // If that pair can cover all other
+        // pairs then store its position
+        if (count == N) {
+            pos = i;
+        }
+    }
+ 
+    // If position not found
+    if (pos == -1) {
+ 
+        cout << pos;
+    }
+ 
+    // Otherwise
+    else {
+ 
+        cout << pos + 1;
+    }
+}
+ 
+// Driver Code
+int main()
+{
+    // Given array of pairs
+    int arr[][2] = {{ 3, 3 }, { 1, 3 },
+                    { 2, 2 }, { 2, 3 },
+                    { 1, 2 }};
+ 
+    int N = sizeof(arr) / sizeof(arr[0]);
+ 
+    // Function Call
+    position(arr, N);
+}
