@@ -1,0 +1,89 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+// Prefix array to precompute
+// the sum of all composite
+// numbers
+long long pref[100001];
+ 
+// Function that return number
+// num if num is composite
+// else return 0
+int isComposite(int n)
+{
+    // Corner cases
+    if (n <= 1)
+        return 0;
+    if (n <= 3)
+        return 0;
+ 
+    // This is checked so that we can skip
+    // middle five numbers in below loop
+    if (n % 2 == 0 || n % 3 == 0)
+        return n;
+ 
+    for (int i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return n;
+ 
+    return 0;
+}
+ 
+// Function to precompute the
+// sum of all Composite numbers
+// upto 10^5
+void preCompute()
+{
+    for (int i = 1; i <= 100000; ++i) {
+ 
+        // isComposite()
+        // return the number i
+        // if i is Composite
+        // else return 0
+        pref[i] = pref[i - 1]
+                + isComposite(i);
+    }
+}
+ 
+// Function to print the sum
+// for each query
+void printSum(int L, int R)
+{
+    cout << pref[R] - pref[L - 1]
+        << endl;
+}
+ 
+// Function to print sum of all
+// Composite numbers between
+// [L, R]
+void printSumComposite(int arr[][2],
+                    int Q)
+{
+ 
+    // Function that pre computes
+    // the sum of all Composite
+    // numbers
+    preCompute();
+ 
+    // Iterate over all Queries
+    // to print the sum
+    for (int i = 0; i < Q; i++) {
+        printSum(arr[i][0], arr[i][1]);
+    }
+}
+ 
+// Driver code
+int main()
+{
+    // Queries
+    int Q = 2;
+    int arr[][2] = { { 10, 13 },
+                      { 12, 21 } };
+ 
+    // Function that print the
+    // the sum of all composite
+    // number in Range [L, R]
+    printSumComposite(arr, Q);
+    return 0;
+}
