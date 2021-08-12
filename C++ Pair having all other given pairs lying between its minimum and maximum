@@ -1,0 +1,41 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Function to find the area of the
+// triangle that inscribed in square
+double areaOftriangle(int side)
+{
+    // Stores the length of the first
+    // side of triangle
+    double a = sqrt(pow(side / 2, 2)
+                    + pow(side / 2, 2));
+ 
+    // Stores the length of the second
+    // side of triangle
+    double b = sqrt(pow(side, 2)
+                    + pow(side / 2, 2));
+ 
+    // Stores the length of the third
+    // side of triangle
+    double c = sqrt(pow(side, 2)
+                    + pow(side / 2, 2));
+ 
+    double s = (a + b + c) / 2;
+ 
+    // Stores the area of the triangle
+    double area = sqrt(s * (s - a)
+                       * (s - b) * (s - c));
+ 
+    // Return the resultant area
+    return area;
+}
+ 
+// Driver Code
+int main()
+{
+    int N = 10;
+    cout << areaOftriangle(N);
+ 
+    return 0;
+}
