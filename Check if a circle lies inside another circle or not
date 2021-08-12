@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void circle(int x1, int y1, int x2,
+            int y2, int r1, int r2)
+{
+    int distSq = sqrt(((x1 - x2)
+                       * (x1 - x2))
+                      + ((y1 - y2)
+                         * (y1 - y2)));
+ 
+    if (distSq + r2 == r1)
+        cout << "The smaller circle lies completely"
+             << " inside the bigger circle with "
+             << "touching each other "
+             << "at a point of circumference. "
+             << endl;
+    else if (distSq + r2 < r1)
+        cout << "The smaller circle lies completely"
+             << " inside the bigger circle without"
+             << " touching each other "
+             << "at a point of circumference. "
+             << endl;
+    else
+        cout << "The smaller does not lies inside"
+             << " the bigger circle completely."
+             << endl;
+}
+ 
+// Driver code
+int main()
+{
+    int x1 = 10, y1 = 8;
+    int x2 = 1, y2 = 2;
+    int r1 = 30, r2 = 10;
+    circle(x1, y1, x2, y2, r1, r2);
+ 
+    return 0;
+}
