@@ -1,0 +1,28 @@
+Enter cost of 3 items for the useer (using float data type) - a pencil , pen & an eraser. You have to output the total cost of the items back to the user as thir bill
+(you can also try to adding 18% gst tax to the items in the bill as an advanced problem)
+
+//code 
+
+import java.util.Scanner;
+
+class Main{
+
+public static void main(String args[]){
+
+Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the cost of pencil : ");
+       float pencil = sc.nextFloat();
+        System.out.println("Enter the cost of pen : ");
+        float pen = sc.nextFloat();
+         System.out.println("Enter the cost of eraser : ");
+         float eraser = sc.nextFloat();
+         
+         float  bill = (pencil+pen+eraser);
+         System.out.println("Total bill is : " + bill);
+         
+         //18% text 
+         float newBill = total + (0.18* bill):
+         System.out.println("New bill with 18% gst :" + newBill);
+      
+   }
+   }
