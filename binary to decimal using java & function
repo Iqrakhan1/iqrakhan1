@@ -1,0 +1,22 @@
+class binarytodecimal{
+    public static void bitodec(int n ){
+        int pow = 0 ;
+        int dec = 0 ; 
+        int myNum = n ;
+        
+        while(n>0){
+            int lastdigit = n%10;
+            dec = dec +(lastdigit * (int)Math.pow(2,pow));
+            pow++;
+            n=n/10;
+        }
+        System.out.println("The binary "+ myNum + ": = " + dec);
+    }
+    public static void main(String[] args) {
+        bitodec(10101);
+         bitodec(11101);
+          bitodec(10111);
+           bitodec(1101011);
+            bitodec(1010101);
+             bitodec(1010101);
+    }
