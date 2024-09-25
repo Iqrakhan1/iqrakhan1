@@ -5,7 +5,7 @@
 <img align = "right" alt = "coding" width = "400" src = "https://learnzoid.com/assets/front/main/others/demo.gif">
 
 
-- 🌱 I’m currently learning **flutter , java , android developmt, Data Stucture & algorithems**
+- 🌱 I’m currently learning **flutter , java , android development, Data Structure & algorithms**
 
 - 📝 I write articles on Quora [https://www.quora.com/profile/Iqra-Khan-1383](https://www.quora.com/profile/Iqra-Khan-1383)
 
